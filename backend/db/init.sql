@@ -112,3 +112,11 @@ CREATE TABLE IF NOT EXISTS warehouse_schedule (
     FOREIGN KEY (booking_id) REFERENCES booking(booking_id),
     FOREIGN KEY (warehouse_id) REFERENCES warehouse(warehouse_id)
 );
+
+CREATE TABLE IF NOT EXISTS messages (
+    message_id INT AUTO_INCREMENT PRIMARY KEY,
+    agent_name VARCHAR(50),    
+    user_input TEXT,           
+    agent_response TEXT,       
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
