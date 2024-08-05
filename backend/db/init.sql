@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS driver;
 DROP TABLE IF EXISTS truck_owner;
 DROP TABLE IF EXISTS city;
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS messages;
 
 -- Create Users Table
 CREATE TABLE IF NOT EXISTS users (
