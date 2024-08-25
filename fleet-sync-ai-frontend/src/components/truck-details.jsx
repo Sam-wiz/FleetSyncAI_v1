@@ -1,23 +1,3 @@
-
-/** Add fonts into your Next.js project:
-
-import { Chivo } from 'next/font/google'
-import { Rubik } from 'next/font/google'
-
-chivo({
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-rubik({
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-To read more about using these font, please visit the Next.js documentation:
-- App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
-- Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
-**/
 import Link from "next/link"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
