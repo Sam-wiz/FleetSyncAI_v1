@@ -12,29 +12,33 @@ export default function Register() {
     password: ""
   });
   const router = useRouter(); 
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+    console.log("Form Data Updated:", formData);
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log("Form Submitted:", formData);
     try {
-      const response = await fetch("http://localhost:5000/register", {
+      const response = await fetch("http://localhost:5000/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify(formData)
       });
+      const data = await response.json();
+      console.log("Response Data:", data);
 
-      if (response.ok) {
+      if (response.ok && data.success) {
+        console.log("Registration successful, redirecting to login...");
         router.push("/login");
       } else {
-        console.log("Registration failed.");
+        console.log("Registration failed:", data.message);
       }
     } catch (error) {
       console.error("Error:", error);
